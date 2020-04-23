@@ -21,3 +21,10 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+# IDEA things
+.idea/
+.idea/workspace.xml
+
+# Lock files
+*.lock
