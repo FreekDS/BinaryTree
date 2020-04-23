@@ -27,7 +27,7 @@ jobs:
       run: | 
         npm install
         git config user.name "FreekDS" && git config user.email "freek.desagher@student.uantwerpen.be"
-        git remote set-url origin https://${{ secrets.GITHUB_TOKENS }}@github.com/${{ github.repository }}.git
+        git remote set-url origin https://${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git
         npm run deploy
       env:
         CI: true
