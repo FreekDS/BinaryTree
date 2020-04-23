@@ -24,7 +24,11 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
-    - run: npm install
-    - run: npm run deploy
+        
+    - name: Deploy to Github pages
+      run: | 
+        npm install
+        git config user.name "FreekDS" && git config user.email "freek.desagher@student.uantwerpen.be"
+        npm run deploy
       env:
         CI: true
