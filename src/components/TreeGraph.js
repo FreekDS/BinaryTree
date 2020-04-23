@@ -1,9 +1,17 @@
 import React, {useState} from "react";
 import Graph from "react-graph-vis";
 import {InputForm} from "./InputForm";
+import {BinaryTree} from "../tree-lib/BinaryTree";
 
 
 let TreeGraph = (props) => {
+
+    const defaultTree = {
+        edges: [],
+        nodes: []
+    };
+
+    let [tree, setTree] = useState(new BinaryTree(null));
 
     let [representation, setRepresentation] = useState({
         edges: [],
@@ -18,9 +26,15 @@ let TreeGraph = (props) => {
         }
     };
 
+    const clear = () => {
+        update(defaultTree);
+        setTree(new BinaryTree(null));
+    };
+
     return (
         <div>
-            <InputForm update={update}/>
+            <InputForm update={update} tree={tree}/>
+            <button onClick={()=> {clear()}}>Clear tree</button>
             <Graph
                 options={props.options}
                 updateTrigger={representation}

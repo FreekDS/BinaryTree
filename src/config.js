@@ -7,7 +7,8 @@ export const options = {
         }
     },
     edges: {
-        color: "#000000"
+        color: "#000000",
+        width: 2
     },
     nodes: {
         shape: "ellipse"

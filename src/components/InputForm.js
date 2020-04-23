@@ -1,10 +1,9 @@
-import React, {useState} from "react";
-import {BinaryTree} from "../tree-lib/BinaryTree";
+import React from "react";
 
 
 const InputForm = (props) => {
 
-    let [tree] = useState(new BinaryTree(null));
+    let {tree} = props;
 
     const handleInput = (event) => {
         event.preventDefault();
