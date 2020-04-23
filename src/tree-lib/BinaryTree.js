@@ -1,3 +1,5 @@
+import {options} from "../config";
+
 class Node {
     static counter = 0;
 
@@ -24,7 +26,7 @@ class Node {
                 index++;
 
                 if (index >= this.value.length) {
-                    this.addRightChild(item)
+                    this.addRightChild(item);
                     return;
                 }
                 if (index >= item.length) {
@@ -73,7 +75,7 @@ class Node {
         }
     }
 
-    toGraph() {
+    toGraph(isRoot = true) {
         let edges = this.parent ?
             [
                 {
@@ -85,16 +87,17 @@ class Node {
             [
                 {
                     id: this.id,
-                    label: this.value
+                    label: this.value,
+                    shape: isRoot? "box" : options.nodes.shape
                 }
             ] : [];
         if (this.left) {
-            let leftRes = this.left.toGraph();
+            let leftRes = this.left.toGraph(false);
             edges = [...edges, ...leftRes.edges];
             nodes = [...nodes, ...leftRes.nodes];
         }
         if (this.right) {
-            let rightRes = this.right.toGraph();
+            let rightRes = this.right.toGraph(false);
             edges = [...edges, ...rightRes.edges];
             nodes = [...nodes, ...rightRes.nodes];
         }

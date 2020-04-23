@@ -3,18 +3,21 @@ export const options = {
         hierarchical: {
             direction: 'UD',
             nodeSpacing: 150,
-            sortMethod : 'directed' //hubsize, directed.
+            sortMethod : 'directed'
         }
     },
     edges: {
         color: "#000000"
     },
+    nodes: {
+        shape: "ellipse"
+    },
     interaction: {
         dragNodes: false,
-        dragView: false,
-        zoomView: false
+        dragView: true,
+        zoomView: true
     },
-    height: "500px",
+    height: "800px",
     physics: {
         enabled: false
     }

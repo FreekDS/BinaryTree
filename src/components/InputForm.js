@@ -1,13 +1,15 @@
-import React from "react";
+import React, {useState} from "react";
+import {BinaryTree} from "../tree-lib/BinaryTree";
 
 
 const InputForm = (props) => {
 
-    let {tree} = props;
+    let [tree] = useState(new BinaryTree(null));
 
     const handleInput = (event) => {
         event.preventDefault();
         tree.insert(event.target.test.value.toLowerCase());
+        event.target.test.value = '';
         props.update(tree.toGraph());
     };
 
