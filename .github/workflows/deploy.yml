@@ -23,11 +23,14 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         
-    - name: Deploy to Github pages
+    - name: Install and build
       run: | 
         npm install
-        git config user.name "FreekDS" && git config user.email "freek.desagher@student.uantwerpen.be"
-        git remote set-url origin https://${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git
-        npm run deploy
-      env:
-        CI: true
+        npm run build
+        
+    - name: Deploy 🚀
+      uses: JamesIves/github-pages-deploy-action@releases/v3
+      with:
+        ACCESS_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        BRANCH: gh-pages # The branch the action should deploy to.
+        FOLDER: build
