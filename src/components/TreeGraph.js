@@ -3,7 +3,6 @@ import Graph from "react-graph-vis";
 import {InputForm} from "./InputForm";
 import {BinaryTree} from "../tree-lib/BinaryTree";
 
-
 let TreeGraph = (props) => {
 
     const defaultTree = {
@@ -34,7 +33,7 @@ let TreeGraph = (props) => {
     return (
         <div>
             <InputForm update={update} tree={tree}/>
-            <button onClick={()=> {clear()}}>Clear tree</button>
+            <button className={"btn btn-primary"} onClick={()=> {clear()}}>Clear tree</button>
             <Graph
                 options={props.options}
                 updateTrigger={representation}
