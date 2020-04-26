@@ -18,7 +18,7 @@ export const options = {
         dragView: true,
         zoomView: true
     },
-    height: "100vh",
+    height: `${window.innerHeight}px`,
     physics: {
         enabled: false
     }

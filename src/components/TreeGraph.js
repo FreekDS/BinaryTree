@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from "react";
+import React, {useCallback, useEffect, useState} from "react";
 import Graph from "react-graph-vis";
 import {InputForm} from "./InputForm";
 import {BinaryTree} from "../tree-lib/BinaryTree";
@@ -19,18 +19,24 @@ let TreeGraph = (props) => {
         nodes: []
     });
     let [network, setNetwork] = useState(null);
+    let [divElement, setDiv] = useState(null);
+
+    let handleResize = useCallback(() => {
+        if(network) {
+            let newOptions = options;
+            newOptions.height = `${divElement.clientHeight}px`;
+            network.setOptions(newOptions);
+            network.fit();
+        }
+    }, [network, divElement]);
+
 
     useEffect(() => {
-        function handleResize() {
-            if(network) {
-                let newOptions = options;
-                newOptions.height = `${window.innerHeight}px`;
-                network.setOptions(newOptions);
-                network.fit();
-            }
-        }
-
         window.addEventListener('resize', handleResize);
+    });
+
+    useEffect(() => {
+        handleResize();
     });
 
     const update = (newVal) => {
@@ -47,7 +53,7 @@ let TreeGraph = (props) => {
 
     return (
         <React.Fragment>
-            <Col>
+            <Col md={4}>
                 <InputForm update={update} tree={tree}/>
 
                 <button className={"btn btn-primary"} onClick={() => {
@@ -56,7 +62,9 @@ let TreeGraph = (props) => {
                 </button>
             </Col>
             <Col>
-                <div style={{height: '100vh'}}>
+                <div style={{height: '80vh'}}
+                     ref={(divElement) => {setDiv(divElement)}}
+                     className={"border border-dark"}>
                     <Graph
                         options={props.options}
                         updateTrigger={representation}
