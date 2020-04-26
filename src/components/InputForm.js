@@ -1,7 +1,8 @@
 import React, {useState} from "react";
 import Form from 'react-bootstrap/Form'
 import FormLabel from "react-bootstrap/FormLabel";
-import FormGroup from "react-bootstrap/FormGroup";
+import '../style/treeForm.css'
+import Col from "react-bootstrap/Col";
 
 
 const InputForm = (props) => {
@@ -25,18 +26,22 @@ const InputForm = (props) => {
     };
 
     return (
-        <div>
+        <div className={"pt-5"}>
             <Form onSubmit={e => handleInput(e)}>
-                <FormGroup>
-                    <FormLabel htmlFor={"input"}>Enter name or number</FormLabel>
-                    <input
-                        className={"form-control"}
-                        type={"text"} id="input"
-                        placeholder={"ex. 10 or Bart"}
-                        onChange={handleChange}
-                    />
-                    <input type={"submit"} className={"btn btn-primary"} value={"add"} disabled={!enabled} />
-                </FormGroup>
+                <FormLabel htmlFor={"input"}>Enter name or number</FormLabel>
+                <Form.Row>
+                    <Col>
+                        <input
+                            className={"form-control"}
+                            type={"text"} id="input"
+                            placeholder={"ex. 10 or Bart"}
+                            onChange={handleChange}
+                        />
+                    </Col>
+                    <Col>
+                        <input type={"submit"} className={"btn btn-primary add-btn"} value={"add"} disabled={!enabled}/>
+                    </Col>
+                </Form.Row>
             </Form>
         </div>
     );

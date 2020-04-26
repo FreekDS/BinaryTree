@@ -4,6 +4,8 @@ import {InputForm} from "./InputForm";
 import {BinaryTree} from "../tree-lib/BinaryTree";
 import Col from "react-bootstrap/Col";
 import {options} from "../config";
+import Row from "react-bootstrap/Row";
+import {IconTrash} from "./Icons";
 
 let TreeGraph = (props) => {
 
@@ -22,7 +24,7 @@ let TreeGraph = (props) => {
     let [divElement, setDiv] = useState(null);
 
     let handleResize = useCallback(() => {
-        if(network) {
+        if (network) {
             let newOptions = options;
             newOptions.height = `${divElement.clientHeight}px`;
             network.setOptions(newOptions);
@@ -53,17 +55,24 @@ let TreeGraph = (props) => {
 
     return (
         <React.Fragment>
-            <Col md={4}>
+            <Col md={4} className={"mb-2"}>
                 <InputForm update={update} tree={tree}/>
-
-                <button className={"btn btn-primary"} onClick={() => {
-                    clear()
-                }}>Clear tree
-                </button>
+                <Row className={"mt-3"}>
+                    <Col>
+                        <button className={"btn btn-danger"} onClick={() => {
+                            clear()
+                        }}>
+                            <IconTrash/>
+                            Clear tree
+                        </button>
+                    </Col>
+                </Row>
             </Col>
             <Col>
                 <div style={{height: '80vh'}}
-                     ref={(divElement) => {setDiv(divElement)}}
+                     ref={(divElement) => {
+                         setDiv(divElement)
+                     }}
                      className={"border border-dark"}>
                     <Graph
                         options={props.options}
