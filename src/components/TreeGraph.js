@@ -5,7 +5,7 @@ import {BinaryTree} from "../tree-lib/BinaryTree";
 import Col from "react-bootstrap/Col";
 import {options} from "../config";
 import Row from "react-bootstrap/Row";
-import {IconTrash, IconGithub} from "./Icons";
+import {IconTrash} from "./Icons";
 
 let TreeGraph = (props) => {
 
