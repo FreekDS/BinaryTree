@@ -20,7 +20,6 @@ const InputForm = (props) => {
 
     const handleChange = (event) => {
         event.preventDefault();
-        console.log(event.target);
         let value = event.target.value.toLowerCase();
         setEnabled(value.length !== 0);
     };
