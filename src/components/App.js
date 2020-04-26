@@ -11,12 +11,9 @@ import Col from 'react-bootstrap/Col'
 function App() {
 
     return (
-        <Container fluid={"md"}>
+        <Container fluid>
             <Row>
-                <Col>
-                    <TreeGraph options={options}/>
-                </Col>
-
+                <TreeGraph options={options}/>
             </Row>
         </Container>
     );

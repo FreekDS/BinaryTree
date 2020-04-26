@@ -18,7 +18,7 @@ export const options = {
         dragView: true,
         zoomView: true
     },
-    height: "800px",
+    height: "100vh",
     physics: {
         enabled: false
     }
