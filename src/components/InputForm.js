@@ -27,13 +27,13 @@ const InputForm = (props) => {
     return (
         <div className={"pt-5"}>
             <Form onSubmit={e => handleInput(e)}>
-                <FormLabel htmlFor={"input"}>Enter name or number</FormLabel>
+                <FormLabel htmlFor={"input"}>Enter word or number</FormLabel>
                 <Form.Row>
                     <Col>
                         <input
                             className={"form-control"}
                             type={"text"} id="input"
-                            placeholder={"ex. 10 or Bart"}
+                            placeholder={"ex. 10 or desk"}
                             onChange={handleChange}
                         />
                     </Col>
