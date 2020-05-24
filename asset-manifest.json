@@ -1,26 +1,26 @@
 {
   "files": {
     "main.css": "/BinaryTree/static/css/main.059f545e.chunk.css",
-    "main.js": "/BinaryTree/static/js/main.071975cf.chunk.js",
-    "main.js.map": "/BinaryTree/static/js/main.071975cf.chunk.js.map",
-    "runtime-main.js": "/BinaryTree/static/js/runtime-main.dc25435b.js",
-    "runtime-main.js.map": "/BinaryTree/static/js/runtime-main.dc25435b.js.map",
-    "static/css/2.69121389.chunk.css": "/BinaryTree/static/css/2.69121389.chunk.css",
-    "static/js/2.65f2bbf0.chunk.js": "/BinaryTree/static/js/2.65f2bbf0.chunk.js",
-    "static/js/2.65f2bbf0.chunk.js.map": "/BinaryTree/static/js/2.65f2bbf0.chunk.js.map",
+    "main.js": "/BinaryTree/static/js/main.7b650934.chunk.js",
+    "main.js.map": "/BinaryTree/static/js/main.7b650934.chunk.js.map",
+    "runtime-main.js": "/BinaryTree/static/js/runtime-main.68eb1324.js",
+    "runtime-main.js.map": "/BinaryTree/static/js/runtime-main.68eb1324.js.map",
+    "static/css/2.af3c1da9.chunk.css": "/BinaryTree/static/css/2.af3c1da9.chunk.css",
+    "static/js/2.d908df90.chunk.js": "/BinaryTree/static/js/2.d908df90.chunk.js",
+    "static/js/2.d908df90.chunk.js.map": "/BinaryTree/static/js/2.d908df90.chunk.js.map",
     "index.html": "/BinaryTree/index.html",
-    "precache-manifest.06ccb2c5ab37eafe87e459e15e4758d6.js": "/BinaryTree/precache-manifest.06ccb2c5ab37eafe87e459e15e4758d6.js",
+    "precache-manifest.5b2410926f4422ea41c54aa402925dd7.js": "/BinaryTree/precache-manifest.5b2410926f4422ea41c54aa402925dd7.js",
     "service-worker.js": "/BinaryTree/service-worker.js",
-    "static/css/2.69121389.chunk.css.map": "/BinaryTree/static/css/2.69121389.chunk.css.map",
+    "static/css/2.af3c1da9.chunk.css.map": "/BinaryTree/static/css/2.af3c1da9.chunk.css.map",
     "static/css/main.059f545e.chunk.css.map": "/BinaryTree/static/css/main.059f545e.chunk.css.map",
-    "static/js/2.65f2bbf0.chunk.js.LICENSE.txt": "/BinaryTree/static/js/2.65f2bbf0.chunk.js.LICENSE.txt",
+    "static/js/2.d908df90.chunk.js.LICENSE.txt": "/BinaryTree/static/js/2.d908df90.chunk.js.LICENSE.txt",
     "static/media/logo-UA.jpg": "/BinaryTree/static/media/logo-UA.024572bb.jpg"
   },
   "entrypoints": [
-    "static/js/runtime-main.dc25435b.js",
-    "static/css/2.69121389.chunk.css",
-    "static/js/2.65f2bbf0.chunk.js",
+    "static/js/runtime-main.68eb1324.js",
+    "static/css/2.af3c1da9.chunk.css",
+    "static/js/2.d908df90.chunk.js",
     "static/css/main.059f545e.chunk.css",
-    "static/js/main.071975cf.chunk.js"
+    "static/js/main.7b650934.chunk.js"
   ]
 }

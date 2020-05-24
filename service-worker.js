@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/BinaryTree/precache-manifest.06ccb2c5ab37eafe87e459e15e4758d6.js"
+  "/BinaryTree/precache-manifest.5b2410926f4422ea41c54aa402925dd7.js"
 );
 
 self.addEventListener('message', (event) => {
